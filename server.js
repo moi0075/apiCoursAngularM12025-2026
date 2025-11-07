@@ -12,13 +12,13 @@ mongoose.set('debug', true);
 // remplacer toute cette chaine par l'URI de connexion à votre propre base dans le cloud s
 const uri = process.env.DB_URI
 
-const options = {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
-};
+// const options = {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+//   useFindAndModify: false,
+// };
 
-mongoose.connect(uri, options).then(
+mongoose.connect(uri).then(
   () => {
     console.log('Connecté à la base MongoDB assignments dans le cloud !');
     console.log('at URI = ' + uri);
